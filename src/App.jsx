@@ -40,8 +40,8 @@ function App() {
         {/* Auth Routes */}
         <Route element={<AuthLayout />}>
           <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard\" replace />} />
-          <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard\" replace />} />
-          <Route path="/forgot-password" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard\" replace />} />
+          <Route path="/register\" element={!user ? <Register /> : <Navigate to="/dashboard\" replace />} />
+          <Route path="/forgot-password\" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard\" replace />} />
         </Route>
         
         {/* Protected Routes */}
