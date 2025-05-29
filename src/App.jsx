@@ -39,9 +39,9 @@ function App() {
       <Routes>
         {/* Auth Routes */}
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard" replace />} />
-          <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard" replace />} />
-          <Route path="/forgot-password" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard" replace />} />
+          <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard\" replace />} />
+          <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard\" replace />} />
+          <Route path="/forgot-password" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard\" replace />} />
         </Route>
         
         {/* Protected Routes */}
@@ -60,7 +60,7 @@ function App() {
         </Route>
         
         {/* Redirect root to dashboard or login */}
-        <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />} />
+        <Route path="/" element={user ? <Navigate to="/dashboard\" replace /> : <Navigate to="/login" replace />} />
         
         {/* 404 Route */}
         <Route path="*" element={<NotFound />} />
