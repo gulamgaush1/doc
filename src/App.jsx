@@ -24,7 +24,7 @@ const AppointmentDetails = lazy(() => import('./pages/appointments/AppointmentDe
 const DiagnosticTools = lazy(() => import('./pages/diagnostics/DiagnosticTools'))
 const SymptomAnalyzer = lazy(() => import('./pages/diagnostics/SymptomAnalyzer'))
 const ImageAnalysis = lazy(() => import('./pages/diagnostics/ImageAnalysis'))
-const Profile = lazy(() => import('./pages/profile/Profile'))
+const Profile = lazy(() => import('./pages/profile/Profile.jsx'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 function App() {
