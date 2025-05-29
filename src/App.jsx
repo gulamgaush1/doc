@@ -20,7 +20,7 @@ const PatientDetails = lazy(() => import('./pages/patients/PatientDetails'))
 const PatientCreate = lazy(() => import('./pages/patients/PatientCreate.jsx'))
 const PatientEdit = lazy(() => import('./pages/patients/PatientEdit.jsx'))
 const Appointments = lazy(() => import('./pages/appointments/Appointments.jsx'))
-const AppointmentDetails = lazy(() => import('./pages/appointments/AppointmentDetails'))
+const AppointmentDetails = lazy(() => import('./pages/appointments/AppointmentDetails.jsx'))
 const DiagnosticTools = lazy(() => import('./pages/diagnostics/DiagnosticTools'))
 const SymptomAnalyzer = lazy(() => import('./pages/diagnostics/SymptomAnalyzer'))
 const ImageAnalysis = lazy(() => import('./pages/diagnostics/ImageAnalysis'))
@@ -39,9 +39,9 @@ function App() {
       <Routes>
         {/* Auth Routes */}
         <Route element={<AuthLayout />}>
-          <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard\" replace />} />
-          <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard\" replace />} />
-          <Route path="/forgot-password" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard\" replace />} />
+          <Route path="/login" element={!user ? <Login /> : <Navigate to="/dashboard" replace />} />
+          <Route path="/register" element={!user ? <Register /> : <Navigate to="/dashboard" replace />} />
+          <Route path="/forgot-password" element={!user ? <ForgotPassword /> : <Navigate to="/dashboard" replace />} />
         </Route>
         
         {/* Protected Routes */}
@@ -60,7 +60,7 @@ function App() {
         </Route>
         
         {/* Redirect root to dashboard or login */}
-        <Route path="/" element={user ? <Navigate to="/dashboard\" replace /> : <Navigate to="/login" replace />} />
+        <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <Navigate to="/login" replace />} />
         
         {/* 404 Route */}
         <Route path="*" element={<NotFound />} />
